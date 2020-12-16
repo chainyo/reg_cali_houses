@@ -10,7 +10,7 @@ L'arbre de décision est un outil utilisé dans des domaines variés tels que la
 
 Il a l'avantage d'être **lisible et rapide** à exécuter. Il s'agit de plus d'une représentation calculable automatiquement par des algorithmes d'apprentissage supervisé.
 
-![DecisionTree]('./DecisionCalcs.jpg')
+![DecisionTree]('DecisionCalcs.jpg')
 
 - <ins>Avantages :</ins>
 
@@ -28,15 +28,15 @@ Il a l'avantage d'être **lisible et rapide** à exécuter. Il s'agit de plus d'
 
 ## Random Decision Forest
 
-La base du calcul repose sur l'apprentissage par arbre de décision. La proposition de Breiman vise à corriger plusieurs inconvénients connus de la méthode initiale, comme la sensibilité des arbres uniques à l'ordre des prédicteurs, en calculant un ensemble de ***$B$*** arbres partiellement indépendants.
+La base du calcul repose sur l'apprentissage par arbre de décision. La proposition de Breiman vise à corriger plusieurs inconvénients connus de la méthode initiale, comme la sensibilité des arbres uniques à l'ordre des prédicteurs, en calculant un ensemble de ***B*** arbres partiellement indépendants.
 
 Une présentation rapide de la proposition peut s'exprimer comme suit :
 
-- Créer ***$B$*** nouveaux ensembles d'apprentissage par un double processus d'échantillonnage :
+- Créer ***B*** nouveaux ensembles d'apprentissage par un double processus d'échantillonnage :
     - sur les observations, en utilisant un tirage avec remise d'un nombre ***N*** d'observations identique à celui des données d'origine (technique connue sous le nom de bootstrap),
     - et sur les {\displaystyle {p}}{p} prédicteurs, en n'en retenant qu'un échantillon de cardinal `m < \sqrt{p}` (la limite n'est qu'indicative).
 - Sur chaque échantillon, on entraîne un arbre de décision selon une des techniques connues, en limitant sa croissance par validation croisée.
-- On stocke les ***$B$*** prédictions de la variable d'intérêt pour chaque observation d'origine.
+- On stocke les ***B*** prédictions de la variable d'intérêt pour chaque observation d'origine.
 - La prédiction de la forêt aléatoire est alors un simple vote majoritaire *(Ensemble learning)*.
 
 Le principal inconvénient de cette méthode est que l'on perd l'aspect visuel des arbres de décision uniques.
