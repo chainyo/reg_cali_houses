@@ -32,7 +32,7 @@ Une présentation rapide de la proposition peut s'exprimer comme suit :
 
 - Créer ***B*** nouveaux ensembles d'apprentissage par un double processus d'échantillonnage :
     - sur les observations, en utilisant un tirage avec remise d'un nombre ***N*** d'observations identique à celui des données d'origine (technique connue sous le nom de bootstrap)
-    - et sur les {\displaystyle {p}}{p} prédicteurs, en n'en retenant qu'un échantillon de cardinal `m < √p` (la limite n'est qu'indicative).
+    - et sur les `p` prédicteurs, en n'en retenant qu'un échantillon de cardinal `m < √p` (la limite n'est qu'indicative).
 - Sur chaque échantillon, on entraîne un arbre de décision selon une des techniques connues, en limitant sa croissance par validation croisée.
 - On stocke les ***B*** prédictions de la variable d'intérêt pour chaque observation d'origine.
 - La prédiction de la forêt aléatoire est alors un simple vote majoritaire *(Ensemble learning)*.
