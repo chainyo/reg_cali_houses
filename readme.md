@@ -10,8 +10,6 @@ L'arbre de décision est un outil utilisé dans des domaines variés tels que la
 
 Il a l'avantage d'être **lisible et rapide** à exécuter. Il s'agit de plus d'une représentation calculable automatiquement par des algorithmes d'apprentissage supervisé.
 
-![DecisionTree]('DecisionCalcs.jpg')
-
 - <ins>Avantages :</ins>
 
     - Facile à comprendre : Le 1er avantage de cet algorithme c’est qu’il est intuitif. Comme vous pourrez le voir dans les explications de son fonctionnement il est vraiment simple à comprendre. Et naturellement on a toujours tendance à préférer utiliser quelque chose que l’on comprend et que l’on maitrise.
@@ -33,8 +31,8 @@ La base du calcul repose sur l'apprentissage par arbre de décision. La proposit
 Une présentation rapide de la proposition peut s'exprimer comme suit :
 
 - Créer ***B*** nouveaux ensembles d'apprentissage par un double processus d'échantillonnage :
-    - sur les observations, en utilisant un tirage avec remise d'un nombre ***N*** d'observations identique à celui des données d'origine (technique connue sous le nom de bootstrap),
-    - et sur les {\displaystyle {p}}{p} prédicteurs, en n'en retenant qu'un échantillon de cardinal `m < \sqrt{p}` (la limite n'est qu'indicative).
+    - sur les observations, en utilisant un tirage avec remise d'un nombre ***N*** d'observations identique à celui des données d'origine (technique connue sous le nom de bootstrap)
+    - et sur les {\displaystyle {p}}{p} prédicteurs, en n'en retenant qu'un échantillon de cardinal `m < √p` (la limite n'est qu'indicative).
 - Sur chaque échantillon, on entraîne un arbre de décision selon une des techniques connues, en limitant sa croissance par validation croisée.
 - On stocke les ***B*** prédictions de la variable d'intérêt pour chaque observation d'origine.
 - La prédiction de la forêt aléatoire est alors un simple vote majoritaire *(Ensemble learning)*.
